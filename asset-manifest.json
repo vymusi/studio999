@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/studio999/static/css/main.75f89d3f.css",
+    "main.js": "/studio999/static/js/main.c954ca2c.js",
+    "static/media/hero-image.JPG": "/studio999/static/media/hero-image.98df624aedc4d6630e29.JPG",
+    "static/media/logo.png": "/studio999/static/media/logo.13bcfa25d31b6f40eb71.png",
+    "index.html": "/studio999/index.html",
+    "main.75f89d3f.css.map": "/studio999/static/css/main.75f89d3f.css.map",
+    "main.c954ca2c.js.map": "/studio999/static/js/main.c954ca2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75f89d3f.css",
+    "static/js/main.c954ca2c.js"
+  ]
+}
