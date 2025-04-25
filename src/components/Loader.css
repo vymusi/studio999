@@ -1,0 +1,111 @@
+/* === LOADER WRAPPER === */
+.loader-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* === FONT BASE STYLES FOR 999 === */
+  .loader-999,
+  .loader-999.fixed-corner,
+  .loader-999.move-corner {
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    color: white;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    display: inline-flex;
+    transition: all 0.8s ease;
+  }
+
+  /* Individual digit style for tighter spacing */
+.loader-999 span {
+    display: inline-block;
+    margin-left: -0.15em; /* tighten spacing */
+  }
+  
+  .loader-999 span:first-child {
+    margin-left: 0; /* avoid shift on the first digit */
+  }
+  
+  /* === LOADER CENTERED === */
+  .loader-999 {
+    font-size: 5rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+  }
+  
+  /* === CORNER TRANSITION === */
+  .loader-999.move-corner {
+    top: 1rem;
+    left: 2rem;
+    transform: translate(0, 0);
+    font-size: 2rem;
+  }
+  
+  /* === CORNER FIXED AFTER LOAD === */
+  .loader-999.fixed-corner {
+    position: fixed;
+    top: 1rem;
+    left: 2rem;
+    font-size: 2rem;
+    z-index: 1000;
+    transform: translate(0, 0);
+  }
+  
+  /* === BLINKING 3rd NINE === */
+  .dimmed-nine {
+    opacity: 0.45;
+    animation: blink 1.2s infinite alternate;
+  }
+  
+  /* === BLINKING KEYFRAMES === */
+  @keyframes blink {
+    0% {
+      opacity: 0.45;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  
+  /* === TOPBAR CONTAINER FOR BUTTON === */
+  .loader-topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: transparent;
+    z-index: 999;
+  }
+  
+  /* === VIEW ALL PAGES BUTTON === */
+  .all-pages-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-family: "fagun", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #8E7DBE 0%, #6DAEDB 100%);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .all-pages-button:hover {
+    background: linear-gradient(135deg, #6DAEDB 0%, #8E7DBE 100%);
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  }
+  
