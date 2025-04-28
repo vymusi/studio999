@@ -1,6 +1,6 @@
 // Home.jsx
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Home.css';
 import logo from '../assets/logo.png';
 import editorialImage from '../assets/hero-image.JPG';
@@ -10,6 +10,7 @@ export default function Home() {
   const [showThirdDigit, setShowThirdDigit] = useState(false);
   const [loadingComplete, setLoadingComplete] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     if (count < 99) {
@@ -32,9 +33,16 @@ export default function Home() {
 
   const navigate = useNavigate();
   const handleAllPagesClick = () => {
-    navigate('/', { state: { startInGrid: true } });
+    navigate('/overview', { state: { startInGrid: true } });
   };
 
+  const handleImageClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   return (
     <div className="home-container">
@@ -42,14 +50,9 @@ export default function Home() {
         <nav className="home-nav fade-in">
           <img src={logo} alt="Logo" className="home-logo" />
           <ul className="home-nav-links">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Resume</a></li>
-            <li><a href="#portfolio">Work</a></li>
             <button className="all-pages-button" onClick={handleAllPagesClick}>
-        View All Pages
-      </button>
-
+              View All Pages
+            </button>
           </ul>
         </nav>
       )}
@@ -71,31 +74,43 @@ export default function Home() {
       </div>
 
       {loadingComplete && (
-        <section className="editorial-section">
-          <img src={editorialImage} alt="Editorial Visual" />
-          <div className="editorial-text">
-            <p>
-              In numerology, 999 symbolizes completion and rebirth—the closing of one chapter and the gentle unfolding of the next.
-              It’s the moment between inhale and exhale, the space where reflection turns into growth.
-            </p>
-            <p>
-              For me, it’s a creative marker—a pulse point on the ever-expanding arc of my work.
-            </p>
-            <p>
-              Not always at 100%. Never stagnant. Always evolving.
-            </p>
-            <p>
-              The third 9 is quiet for a reason. It’s the unseen effort, the quiet grit, the lessons you don’t post but feel in your bones.
-            </p>
-            <p>
-              It’s the echo of everything I’ve made so far—and a whisper toward what’s still coming.
-            </p>
-            <p>
-              This site isn’t a portfolio. It’s a living archive of reinvention, reflection, and wild curiosity.
-              Welcome to the work-in-progress.
-            </p>
-          </div>
-        </section>
+        <>
+          <section className="home-main">
+          <Link to="/overview" className="home-side-text portfolio-link">
+            PORTFOLIO
+          </Link>
+
+
+            <div 
+              className="home-image-wrapper"
+              onClick={handleImageClick}
+            >
+              <img src={editorialImage} alt="Muskan" className="home-image" />
+              <div className="image-hover-text">Uncover Our Ethos</div>
+            </div>
+
+            <Link to="/work" className="home-side-text playground-link">
+              PLAYGROUND
+            </Link>
+
+          </section>
+
+          {showPopup && (
+            <div className="popup-overlay" onClick={handleClosePopup}>
+              <div className="popup-content" onClick={(e) => e.stopPropagation()}>
+                <button className="popup-close" onClick={handleClosePopup}>✕</button>
+                <div className="home-text-block">
+                  <p>IN NUMEROLOGY, 999 SYMBOLIZES COMPLETION AND REBIRTH—THE CLOSING OF ONE CHAPTER AND THE GENTLE UNFOLDING OF THE NEXT. IT’S THE MOMENT BETWEEN INHALE AND EXHALE, THE SPACE WHERE REFLECTION TURNS INTO GROWTH.</p>
+                  <p>FOR ME, IT’S A CREATIVE MARKER—A PULSE POINT ON THE EVER-EXPANDING ARC OF MY WORK.</p>
+                  <p>NOT ALWAYS AT 100%. NEVER STAGNANT. ALWAYS EVOLVING.</p>
+                  <p>THE THIRD 9 IS QUIET FOR A REASON. IT’S THE UNSEEN EFFORT, THE QUIET GRIT, THE LESSONS YOU DON’T POST BUT FEEL IN YOUR BONES.</p>
+                  <p>IT’S THE ECHO OF EVERYTHING I’VE MADE SO FAR—AND A WHISPER TOWARD WHAT’S STILL COMING.</p>
+                  <p>THIS SITE ISN’T A PORTFOLIO. IT’S A LIVING ARCHIVE OF REINVENTION, REFLECTION, AND WILD CURIOSITY. WELCOME TO THE WORK-IN-PROGRESS.</p>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

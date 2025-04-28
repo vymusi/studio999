@@ -20,7 +20,7 @@ export default function Loader({ children }) {
   }, []);
 
   const handleAllPagesClick = () => {
-    navigate('/', { state: { startInGrid: true } });
+    navigate('/overview', { state: { startInGrid: true } });
   };
 
   return (

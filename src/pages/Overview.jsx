@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Overview.css';
 
 const pages = [
-  { name: 'Home', route: '/home', number: '01' },
+  { name: 'Home', route: '/', number: '01' },
   { name: 'About', route: '/about', number: '02' },
   { name: 'Resume', route: '/resume', number: '03' },
   { name: 'Work', route: '/work', number: '04' },

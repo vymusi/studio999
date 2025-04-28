@@ -43,10 +43,13 @@ export default function About() {
   return (
     <Loader> 
     <div className="about-container">
-      <h1 className="sub-title">About</h1>
+      <h1 className="sub-title">About Me</h1>
       <p className="bio">
         MUSKAN /MUHS-KAWN/ (NOUN) - SMILE<br />
-        Muskan Vyas, a name synonymous with a wide-eyed curiosity, is working towards weaving unique narratives that unveil brand identity and integrity through forward-thinking Web Design—powering through her expertise in UX/UI & FrontEnd Engineering. With every project, she plunges into the depths of individuality, exploration, and formulaic intent, orchestrating meaningful work, keeping her clients happy with a Muskan (smile).
+        I'm Muskan Vyas — a creative engineer, multidisciplinary artist, and lifelong student of reinvention.
+At the intersection of design, technology, and storytelling, I build not just interfaces, but experiences that pulse with curiosity and soul.
+My background bridges the worlds of consumer tech, fashion, and art, shaped through engineering work at Nike, independent creative projects, and my own evolving artistic practice.
+I believe the best work doesn't aim for perfection — it breathes, it risks, it grows.
       </p>
 
       <div className="tab-titles">
