@@ -15,32 +15,32 @@ import GovEagleVideo from '../assets/goveagle.mp4';
 
 const projects = [
   { 
-    title: "ProBot", 
-    path: "/work/probot", 
-    meta: "2024 / AI Developer", 
-    media: ProbotImage,
+    title: "Nike - SNKRS Maps", 
+    path: "/work/nikesnkrs", 
+    meta: "2025 / Creative Fullstack Engineer", 
+    media: NikeSNKRSImage,
     type: 'image'
   },
   { 
-    title: "Nike - SNKRS Maps", 
-    path: "/work/nikesnkrs", 
-    meta: "2023 / UX Engineer", 
-    media: NikeSNKRSImage,
+    title: "GovEagle", 
+    path: "/work/goveagle", 
+    meta: "2024 / Frontend UI Engineer", 
+    media: GovEagleVideo,
+    type: 'video'
+  },
+  { 
+    title: "ProBot", 
+    path: "/work/probot", 
+    meta: "2023 / UX Designer | Creative Developer", 
+    media: ProbotImage,
     type: 'image'
   },
   { 
     title: "Nike - Lambda/Capacity", 
     path: "/work/nikelambda", 
-    meta: "2023 / Systems Engineer", 
+    meta: "2023 / Fullstack Engineer", 
     media: NikeLambdaImage,
     type: 'image'
-  },
-  { 
-    title: "Spotify Re-design", 
-    path: "/work/spotify", 
-    meta: "2023 / UX/UI Designer", 
-    media: SpotifyVideo,
-    type: 'video'
   },
   { 
     title: "Closet.AI", 
@@ -50,10 +50,10 @@ const projects = [
     type: 'image'
   },
   { 
-    title: "GovEagle", 
-    path: "/work/goveagle", 
-    meta: "2022 / Frontend Engineer", 
-    media: GovEagleVideo,
+    title: "Spotify Re-design", 
+    path: "/work/spotify", 
+    meta: "2021 / UX/UI Designer", 
+    media: SpotifyVideo,
     type: 'video'
   },
 ];

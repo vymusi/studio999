@@ -1,65 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Loader from '../components/Loader';
 import './About.css';
+import AboutImage from '../assets/about-portrait.jpg'; // or correct image path
 
 export default function About() {
-  const [activeTab, setActiveTab] = useState('skills');
-
-  const renderTabContent = () => {
-    switch (activeTab) {
-      case 'skills':
-        return (
-          <ul>
-            <li><span>Web Developer/Engineer</span><br />Web App Development</li>
-            <li><span>Designer</span><br />Designing Web/App Interfaces</li>
-            <li><span>Artist</span><br />Multimedia Art</li>
-          </ul>
-        );
-      case 'experience':
-        return (
-          <ul>
-            <li><span>2024</span><br />Lead Designer at GovEagle (YC Startup)</li>
-            <li><span>2023-Current</span><br />Software Engineer at SNKRS</li>
-            <li><span>2021-2023</span><br />Associate Software Engineer at Nike</li>
-            <li><span>2020</span><br />Creative Engineer Intern at Nike</li>
-            <li><span>2019-2021</span><br />Web Developer at Vintage Vinyl Records</li>
-            <li><span>2019-2020</span><br />Research Assistant at Rutgers University-New Brunswick</li>
-            <li><span>2019</span><br />UX Designer at Hydrotechnology Consultants, Inc</li>
-          </ul>
-        );
-      case 'education':
-        return (
-          <ul>
-            <li><span>2023</span><br />User Experience Design at Cornell University</li>
-            <li><span>2017-2021</span><br />B.A. in Information Technology & Informatics from Rutgers University</li>
-            <li><span>2017-2021</span><br />B.A. in Cognitive Science from Rutgers University</li>
-          </ul>
-        );
-      default:
-        return null;
-    }
-  };
-
   return (
     <Loader> 
-    <div className="about-container">
-      <h1 className="sub-title">About Me</h1>
-      <p className="bio">
-        MUSKAN /MUHS-KAWN/ (NOUN) - SMILE<br />
-        I'm Muskan Vyas — a creative engineer, multidisciplinary artist, and lifelong student of reinvention.
-At the intersection of design, technology, and storytelling, I build not just interfaces, but experiences that pulse with curiosity and soul.
-My background bridges the worlds of consumer tech, fashion, and art, shaped through engineering work at Nike, independent creative projects, and my own evolving artistic practice.
-I believe the best work doesn't aim for perfection — it breathes, it risks, it grows.
-      </p>
+      <div className="about-page">
+        <div className="about-left">
+          <h1 className="about-heading">ABOUT</h1>
+          <div className="about-divider"></div> {/* NOT self-closed */}
 
-      <div className="tab-titles">
-        <p className={`tab-link ${activeTab === 'skills' ? 'active' : ''}`} onClick={() => setActiveTab('skills')}>Skills</p>
-        <p className={`tab-link ${activeTab === 'experience' ? 'active' : ''}`} onClick={() => setActiveTab('experience')}>Experience</p>
-        <p className={`tab-link ${activeTab === 'education' ? 'active' : ''}`} onClick={() => setActiveTab('education')}>Education</p>
+          <div className="about-description">
+            <p>Hi, I’m <strong>Muskan</strong> — a <strong>Creative Engineer</strong> and multidisciplinary artist based in NYC.</p>
+            <p>With a background spanning UX/UI design, front-end development, and consumer tech, I specialize in weaving thoughtful, forward-thinking web experiences that unveil brand identity and integrity.</p>
+            <p>I have a wide-eyed curiosity for building across disciplines — blending design systems, user psychology, and modern web architecture into immersive digital stories. When I'm not engineering interfaces or crafting visuals, I’m usually chasing inspiration through music, art, and city streets — camera in hand, capturing the beauty of the details hidden in everyday moments.</p>
+            <p>As a creative technologist, I thrive at the intersection of structure and intuition. My expertise stretches from UX research and high-fidelity UI design to frontend web & native development — along with a passion for creating experiences that feel as alive as they are functional.</p>
+            <p>At the heart of it all, I care about crafting work that reflects individuality, exploration, and the quiet, unseen effort that real growth demands.</p>
+            <p><em>Studio999 is my living archive of that journey — not a finish line, but a pulse point along the way. Always evolving. Always unfolding.</em></p>
+          </div>
+        </div>
+
+        <div className="about-right">
+          <img src={AboutImage} alt="About Muskan" className="about-image" />
+        </div>
       </div>
-
-      <div className="tab-content">{renderTabContent()}</div>
-    </div>
     </Loader>
   );
 }

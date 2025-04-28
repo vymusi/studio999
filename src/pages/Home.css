@@ -66,14 +66,18 @@
 /* Subtitle under 999 */
 .editorial-subtitle {
   position: absolute;
-  bottom: 0;
-  font-family: 'pennypacker', sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  line-height: 1;
-  letter-spacing: 0.08em;
+  bottom: 5%; /* Bring it up slightly from the very bottom for better framing */
+  width: 80%; /* Add a maximum width to control line breaks */
+  max-width: 2000px; /* Control it on large screens */
+  font-family: 'neue-haas-grotesk-display', sans-serif; /* Match the bold modern font you're already using */
+  font-weight: 900;
+  font-style: italic;
+  font-size: 3rem; /* Make it way larger */
+  line-height: 0.9;
+  letter-spacing: 0.05em; /* Add subtle wide spacing */
   color: white;
-  margin-bottom: 0;
+  margin: 0 auto;
+  text-align: center;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUpText 2s ease forwards;
@@ -296,9 +300,11 @@
 
   /* Adjust subtitle under loader */
   .editorial-subtitle {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 2rem; /* Smaller on mobile */
+    line-height: 1.2;
+    width: 90%;
     padding: 0 1rem;
+    text-align: center;
   }
 
   /* Stack PORTFOLIO | IMAGE | PLAYGROUND vertically */

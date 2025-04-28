@@ -1,58 +1,81 @@
-.about-container {
-    padding: 4rem;
-    max-width: 900px;
-    margin: 0 auto;
+/* About.css */
+
+.about-page {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: #0f0f0f;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.about-left {
+  flex: 1;
+  padding: 6em 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-heading {
+  font-size: 4rem;
+  font-family: "neue-haas-grotesk-display", sans-serif;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.about-divider {
+  height: 2px;
+  background-color: #888;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  font-family: "poppins", sans-serif;
+  max-width: 800px;
+}
+
+.about-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.about-image {
+  height: 150vh;
+  width: auto;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 0; /* no padding/margin on right */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-page {
+    flex-direction: column;
   }
-  
-  .sub-title {
-    font-size: 3rem;
-    color: #fff200;
-    margin-bottom: 1.5rem;
-  }
-  
-  .bio {
-    font-size: 1.1rem;
-    color: #aaa;
-    line-height: 1.8;
-  }
-  
-  .tab-titles {
-    display: flex;
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .tab-link {
-    cursor: pointer;
-    font-weight: 600;
-    position: relative;
-    padding-bottom: 4px;
-    color: white;
-  }
-  
-  .tab-link.active::after {
-    content: '';
-    position: absolute;
+
+  .about-right {
     width: 100%;
-    height: 3px;
-    background-color: #fff200;
-    bottom: 0;
-    left: 0;
+    justify-content: center;
   }
-  
-  .tab-content ul {
-    margin-top: 1rem;
-    list-style: none;
-    padding-left: 0;
+
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
   }
-  
-  .tab-content li {
-    margin-bottom: 1rem;
-    color: #ddd;
+
+  .about-left {
+    padding: 4rem 2rem;
+    text-align: center;
   }
-  
-  .tab-content li span {
-    font-weight: bold;
-    color: #fff200;
-  }
-  
+}

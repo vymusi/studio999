@@ -12,6 +12,20 @@ export default function Home() {
   const [showNav, setShowNav] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
+  const navigate = useNavigate();
+
+  // NEW: Use sessionStorage instead of localStorage
+  useEffect(() => {
+    const loaderAlreadySeen = sessionStorage.getItem('loaderSeen') === 'true';
+
+    if (loaderAlreadySeen) {
+      setCount(99);
+      setShowThirdDigit(true);
+      setShowNav(true);
+      setLoadingComplete(true);
+    }
+  }, []);
+
   useEffect(() => {
     if (count < 99) {
       const interval = setInterval(() => {
@@ -21,7 +35,10 @@ export default function Home() {
     } else {
       const thirdDigitTimeout = setTimeout(() => setShowThirdDigit(true), 600);
       const navRevealTimeout = setTimeout(() => setShowNav(true), 2300);
-      const doneTimeout = setTimeout(() => setLoadingComplete(true), 2800);
+      const doneTimeout = setTimeout(() => {
+        setLoadingComplete(true);
+        sessionStorage.setItem('loaderSeen', 'true'); // Use sessionStorage
+      }, 2800);
 
       return () => {
         clearTimeout(thirdDigitTimeout);
@@ -31,10 +48,9 @@ export default function Home() {
     }
   }, [count]);
 
-  const navigate = useNavigate();
-  const handleAllPagesClick = () => {
-    navigate('/overview', { state: { startInGrid: true } });
-  };
+  // const handleAllPagesClick = () => {
+  //   navigate('/overview', { state: { startInGrid: true } });
+  // };
 
   const handleImageClick = () => {
     setShowPopup(true);
@@ -52,9 +68,9 @@ export default function Home() {
           <ul className="home-nav-links">
             <li><Link to="/about" className="home-nav-link">About</Link></li>
             <li><Link to="/resume" className="home-nav-link">Resume</Link></li>
-            <li><button className="all-pages-button" onClick={handleAllPagesClick}>
+             {/* <li><button className="all-pages-button" onClick={handleAllPagesClick}>
               View All Pages
-            </button></li>
+            </button></li> */}
           </ul>
         </nav>
       )}
@@ -69,7 +85,7 @@ export default function Home() {
         {loadingComplete && (
           <p className="editorial-subtitle fade-in-subtitle">
             NOT A FINISH LINE.<br />
-            NOT PERFECTION.<br />
+            NOT A MEASURE OF PERFECTION.<br />
             BUT A SACRED IN-BETWEEN.
           </p>
         )}
@@ -78,10 +94,9 @@ export default function Home() {
       {loadingComplete && (
         <>
           <section className="home-main">
-          <Link to="/work" className="home-side-text portfolio-link">
-            PORTFOLIO
-          </Link>
-
+            <Link to="/work" className="home-side-text portfolio-link">
+              PORTFOLIO
+            </Link>
 
             <div 
               className="home-image-wrapper"
@@ -94,7 +109,6 @@ export default function Home() {
             <Link to="/playground" className="home-side-text playground-link">
               PLAYGROUND
             </Link>
-
           </section>
 
           {showPopup && (
@@ -102,12 +116,12 @@ export default function Home() {
               <div className="popup-content" onClick={(e) => e.stopPropagation()}>
                 <button className="popup-close" onClick={handleClosePopup}>✕</button>
                 <div className="home-text-block">
-                  <p>IN NUMEROLOGY, 999 SYMBOLIZES COMPLETION AND REBIRTH—THE CLOSING OF ONE CHAPTER AND THE GENTLE UNFOLDING OF THE NEXT. IT’S THE MOMENT BETWEEN INHALE AND EXHALE, THE SPACE WHERE REFLECTION TURNS INTO GROWTH.</p>
-                  <p>FOR ME, IT’S A CREATIVE MARKER—A PULSE POINT ON THE EVER-EXPANDING ARC OF MY WORK.</p>
-                  <p>NOT ALWAYS AT 100%. NEVER STAGNANT. ALWAYS EVOLVING.</p>
-                  <p>THE THIRD 9 IS QUIET FOR A REASON. IT’S THE UNSEEN EFFORT, THE QUIET GRIT, THE LESSONS YOU DON’T POST BUT FEEL IN YOUR BONES.</p>
-                  <p>IT’S THE ECHO OF EVERYTHING I’VE MADE SO FAR—AND A WHISPER TOWARD WHAT’S STILL COMING.</p>
-                  <p>THIS SITE ISN’T A PORTFOLIO. IT’S A LIVING ARCHIVE OF REINVENTION, REFLECTION, AND WILD CURIOSITY. WELCOME TO THE WORK-IN-PROGRESS.</p>
+                <p>IN NUMEROLOGY, 999 SYMBOLIZES COMPLETION AND REBIRTH—THE CLOSING OF ONE CHAPTER AND THE GENTLE UNFOLDING OF THE NEXT. IT’S THE MOMENT BETWEEN INHALE AND EXHALE, THE SPACE WHERE REFLECTION TURNS INTO GROWTH.</p>
+                <p>FOR ME, IT’S A CREATIVE MARKER—A PULSE POINT ON THE EVER-EXPANDING ARC OF MY WORK.</p>
+                <p>NOT ALWAYS AT 100%. NEVER STAGNANT. ALWAYS EVOLVING.</p>
+                <p>THE THIRD 9 IS QUIET FOR A REASON. IT’S THE UNSEEN EFFORT, THE QUIET GRIT, THE DEPTHS WHERE REAL TRANSFORMATION TAKES ROOT.</p>
+                <p>IT’S THE ECHO OF EVERYTHING I’VE MADE SO FAR—AND A WHISPER TOWARD WHAT’S STILL COMING.</p>
+                <p>THIS SITE ISN’T A PORTFOLIO. IT’S A LIVING ARCHIVE OF REINVENTION, REFLECTION, AND WILD CURIOSITY. WELCOME TO THE WORK-IN-PROGRESS.</p>
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ export default function Loader({ children }) {
         setLoading(false);
       }, 800); // transition before page loads
       return () => clearTimeout(hideLoader);
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,9 +39,9 @@ export default function Loader({ children }) {
               <span>9</span>
               <span className="dimmed-nine">9</span>
             </Link>
-            <button className="all-pages-button" onClick={handleAllPagesClick}>
+            {/* <button className="all-pages-button" onClick={handleAllPagesClick}>
               View All Pages
-            </button>
+            </button> */}
           </div>
           {children}
         </>
