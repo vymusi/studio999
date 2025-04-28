@@ -1,0 +1,131 @@
+/* Work.css */
+
+.work-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 8rem 4rem 4rem 4rem;
+    background: #0f0f0f;
+    min-height: 100vh;
+    box-sizing: border-box;
+    gap: 4rem;
+    overflow-x: hidden;
+  }
+  
+  /* Left Side (Project List) */
+  .project-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project-header {
+    font-size: 4rem;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+  }
+  
+  .project-item {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .project-title {
+    font-size: 2.5rem;
+    color: white;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .project-title:hover {
+    color: #ccc;
+  }
+  
+  .project-meta {
+    font-size: 1rem;
+    color: #aaa;
+    margin-top: 0.4rem;
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+  }
+  
+  /* Right Side (Hover Preview) */
+  .hover-preview {
+    flex: 1;
+    position: relative;
+    height: 820px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hover-image,
+  .hover-video {
+    width: 90%;
+    height: 90%;
+    max-width: 950px;
+    max-height: 700px;
+    background-size: contain;
+    background-position: center;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Framer Motion will add .show automatically */
+  
+  /* Responsive behavior */
+  @media (max-width: 1024px) {
+    .work-container {
+      flex-direction: column;
+      padding: 6rem 2rem;
+      gap: 3rem;
+    }
+  
+    .hover-preview {
+      width: 100%;
+      height: auto;
+      margin-top: 2rem;
+    }
+  
+    .hover-image,
+    .hover-video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      aspect-ratio: 4/3;
+      margin: 0 auto;
+      border-radius: 16px;
+    }
+  
+    .project-title {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .project-title {
+      font-size: 1.6rem;
+    }
+  
+    .project-meta {
+      font-size: 0.9rem;
+    }
+  
+    .hover-image,
+    .hover-video {
+      width: 100%;
+      max-width: 90%;
+      border-radius: 12px;
+    }
+  }
+  

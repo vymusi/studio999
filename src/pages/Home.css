@@ -117,6 +117,19 @@
   align-items: center;
 }
 
+.home-nav-link {
+  color: #d1d1d1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "fagun", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.home-nav-link:hover {
+  color: #ffffff;
+}
+
+
 .all-pages-button {
   padding: 1rem 1.5rem;
   font-size: 1rem;

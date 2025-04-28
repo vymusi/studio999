@@ -50,9 +50,11 @@ export default function Home() {
         <nav className="home-nav fade-in">
           <img src={logo} alt="Logo" className="home-logo" />
           <ul className="home-nav-links">
-            <button className="all-pages-button" onClick={handleAllPagesClick}>
+            <li><Link to="/about" className="home-nav-link">About</Link></li>
+            <li><Link to="/resume" className="home-nav-link">Resume</Link></li>
+            <li><button className="all-pages-button" onClick={handleAllPagesClick}>
               View All Pages
-            </button>
+            </button></li>
           </ul>
         </nav>
       )}
@@ -76,7 +78,7 @@ export default function Home() {
       {loadingComplete && (
         <>
           <section className="home-main">
-          <Link to="/overview" className="home-side-text portfolio-link">
+          <Link to="/work" className="home-side-text portfolio-link">
             PORTFOLIO
           </Link>
 
@@ -89,7 +91,7 @@ export default function Home() {
               <div className="image-hover-text">Uncover Our Ethos</div>
             </div>
 
-            <Link to="/work" className="home-side-text playground-link">
+            <Link to="/playground" className="home-side-text playground-link">
               PLAYGROUND
             </Link>
 

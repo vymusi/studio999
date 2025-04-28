@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Loader.css';
 
 export default function Loader({ children }) {
@@ -34,11 +34,11 @@ export default function Loader({ children }) {
       ) : (
         <>
           <div className="loader-topbar">
-            <div className="loader-999 fixed-corner">
+            <Link to="/" className="loader-999 fixed-corner clickable-999">
               <span>9</span>
               <span>9</span>
               <span className="dimmed-nine">9</span>
-            </div>
+            </Link>
             <button className="all-pages-button" onClick={handleAllPagesClick}>
               View All Pages
             </button>
