@@ -1,0 +1,180 @@
+.contact-cta-section {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+  }
+  
+  .cta-title {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 2rem;
+    transform: scaleX(1.2); /* horizontal stretch */
+    display: inline-block;
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+  }
+  
+  .cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- CENTERED LAYOUT --- */
+  .cta-horizontal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 4rem;
+  }
+  
+  .cta-side-left,
+  .cta-side-right {
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 660px; /* Match image height */
+    text-align: center;
+  }
+  
+  .cta-side-left {
+    justify-content: flex-end;
+  }
+  
+  .cta-side-right {
+    justify-content: flex-start;
+  }
+  
+  .cta-image-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* --- IMAGE + LABEL STYLING --- */
+  .cta-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .cta-image {
+    width: 460px;
+    height: 660px;
+    object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    margin-top: 0.5rem;
+  }
+  
+  .cta-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  
+  .cta-label-primary {
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+  
+  .cta-label-secondary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.05em;
+  }
+  
+  /* --- BUTTON STYLES --- */
+  .cta-button {
+    padding: 0.75rem 2rem;
+    font-weight: 700;
+    background: white;
+    color: black;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+  }
+  
+  /* --- DESCRIPTION + LINKS --- */
+  .cta-description-block {
+    margin-top: 4rem;
+    text-align: center;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cta-description {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #bbb;
+    line-height: 1.7;
+  }
+  
+  .cta-links {
+    margin-top: 2rem;
+  }
+  
+  .cta-links a {
+    margin: 0 1rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cta-links a:hover {
+    opacity: 0.7;
+  }
+  
+  /* --- FOOTER --- */
+  .cta-footer {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+    border-top: 1px solid #222;
+  }
+  
+  .back-to-top {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    opacity: 0.6;
+  }
+  

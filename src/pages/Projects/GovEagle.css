@@ -1,0 +1,93 @@
+/* === BASE LAYOUT === */
+.goveagle-page {
+    background-color: #0f0f0f;
+    color: white;
+    font-family: 'neue-haas-grotesk-display', sans-serif;
+  }
+  
+  /* === HERO SECTION === */
+  .hero-intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+  
+  .hero-title {
+    font-size: 6rem;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .hero-meta {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #999;
+    margin-top: 1.5rem;
+  }
+  
+  /* === SCROLL SECTION === */
+  .scroll-parallax {
+    position: relative;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .parallax-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.6);
+  }
+  
+  .parallax-caption {
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .parallax-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .parallax-subtitle {
+    font-size: 1.25rem;
+    color: #ccc;
+  }
+  
+  /* === CASE STUDY SECTION === */
+  .case-study-content {
+    padding: 6rem 2rem;
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  
+  .case-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .case-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #ddd;
+  }
+  
+  .case-content ul {
+    padding-left: 1.5rem;
+    list-style: disc;
+    margin-top: 1rem;
+  }
+  

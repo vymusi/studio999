@@ -1,10 +1,10 @@
 {
-  "homepage": "https://vymusi.github.io/studio999",
+  "homepage": "https://vymusi.github.io/studio999/",
   "name": "muskan-portfolio-react",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "framer-motion": "^12.9.2",
+    "framer-motion": "^12.10.4",
     "p5": "^2.0.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

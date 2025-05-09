@@ -24,9 +24,24 @@
     font-size: 4rem;
     font-family: "neue-haas-grotesk-display", sans-serif;
     font-weight: 700;
-    margin-bottom: 2rem;
     color: white;
   }
+
+  .project-header-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 6rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1.1rem;
+    color: #888;
+    font-weight: 400;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    max-width: 900px;
+    line-height: 1.6;
+  }
+  
   
   .project-item {
     display: flex;

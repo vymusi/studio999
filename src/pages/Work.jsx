@@ -65,8 +65,13 @@ export default function Work() {
     <Loader>
       <div className="work-container">
         
-        <div className="project-list">
-          <div className="project-header">WORK ARCHIVE</div>
+       <div className="project-list">
+        
+        <div className="project-header-block">
+          <div className="project-header">THE ARCHIVAL</div>
+          <div className="project-subtitle">A curated record of my creative and technical evolutions.</div>
+        </div>
+
 
           {projects.map((project, index) => (
             <div 

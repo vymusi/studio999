@@ -1,0 +1,49 @@
+.marquee-section {
+    position: relative;
+    background: #0f0f0f;
+    overflow: hidden;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+  }
+  
+  .marquee-track {
+    white-space: nowrap;
+    font-size: 5rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    animation: marquee 20s linear infinite;
+    position: relative;
+  }
+  
+  .marquee-text {
+    color: rgba(255, 255, 255, 0.1);
+    margin-right: 3rem;
+    transition: color 0.3s ease;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+  }
+  
+  .view-cursor {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: all;
+    background: white;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    z-index: 999;
+    text-decoration: none;
+    mix-blend-mode: difference;
+    font-family: "neue-haas-grotesk-display", sans-serif;
+    transition: transform 0.2s ease;
+  }
+  
