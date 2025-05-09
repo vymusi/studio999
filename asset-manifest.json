@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/studio999/static/css/main.0ba09107.css",
-    "main.js": "/studio999/static/js/main.7ad7da69.js",
+    "main.css": "/studio999/static/css/main.b991ac0b.css",
+    "main.js": "/studio999/static/js/main.458390f5.js",
     "static/media/goveagle.mp4": "/studio999/static/media/goveagle.faff953c2aa278cee6f0.mp4",
     "static/media/hero-image.JPG": "/studio999/static/media/hero-image.98df624aedc4d6630e29.JPG",
     "static/media/spotify.mp4": "/studio999/static/media/spotify.dd073e6bfba58df84ea8.mp4",
+    "static/media/spotify-project-image.png": "/studio999/static/media/spotify-project-image.2b8478628d21367bf65f.png",
     "static/media/nikesnkrs.jpg": "/studio999/static/media/nikesnkrs.a4466d4c4ba03606fe7e.jpg",
     "static/media/about-portrait.jpg": "/studio999/static/media/about-portrait.e71fac87ae74fd9529b9.jpg",
     "static/media/probot.jpg": "/studio999/static/media/probot.79acc7e9c87f4841195a.jpg",
     "static/media/nikelambda.jpg": "/studio999/static/media/nikelambda.1621f2169b6bbeff70e3.jpg",
+    "static/media/GovEagle-project-image.jpg": "/studio999/static/media/GovEagle-project-image.9e2ed0ad20c2536ead9a.jpg",
     "static/media/closetai.jpeg": "/studio999/static/media/closetai.524f69adb92f1752e0ed.jpeg",
     "static/media/logo.png": "/studio999/static/media/logo.13bcfa25d31b6f40eb71.png",
     "index.html": "/studio999/index.html",
-    "main.0ba09107.css.map": "/studio999/static/css/main.0ba09107.css.map",
-    "main.7ad7da69.js.map": "/studio999/static/js/main.7ad7da69.js.map"
+    "main.b991ac0b.css.map": "/studio999/static/css/main.b991ac0b.css.map",
+    "main.458390f5.js.map": "/studio999/static/js/main.458390f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ba09107.css",
-    "static/js/main.7ad7da69.js"
+    "static/css/main.b991ac0b.css",
+    "static/js/main.458390f5.js"
   ]
 }
